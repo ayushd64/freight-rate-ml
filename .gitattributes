@@ -1,0 +1,4 @@
+# Normalise line endings; keep CSV and shell scripts LF for cross-platform tooling
+* text=auto
+*.csv text eol=lf
+*.sh text eol=lf
