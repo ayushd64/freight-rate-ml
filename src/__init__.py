@@ -1,0 +1,1 @@
+"""Freight rate prediction pipeline for the Spotter ML Engineer assessment."""

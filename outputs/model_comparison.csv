@@ -1,0 +1,4 @@
+model,MAE,RMSE,MAPE_%,MedAPE_%,MAE_worst_fold,MAE_all_rows
+median $/mile,198.08,284.11,9.4,7.92,203.69,249.25
+ridge,147.53,206.24,6.12,6.0,238.75,199.49
+lightgbm,61.09,112.4,2.56,1.81,64.22,114.22
