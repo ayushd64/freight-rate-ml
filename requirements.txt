@@ -1,7 +1,8 @@
-# Scorer dependencies (unchanged from the provided requirements.txt)
+# Scorer dependencies. The provided requirements.txt pinned pandas>=2.0,<3;
+# widened to <4 after verifying score.py runs unmodified on pandas 3.0.5.
 matplotlib>=3.8,<4
 numpy>=1.26,<3
-pandas>=2.0,<3
+pandas>=2.0,<4
 
 # Modelling
 scikit-learn>=1.4,<2

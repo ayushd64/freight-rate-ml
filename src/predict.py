@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
+import os
 
 from src import data
 from src.features import build_features, fit_feature_context, rate_from_prediction
@@ -129,9 +130,12 @@ def main() -> None:
     _report_december(december)
     print(f"  written to {data.DECEMBER_FILE.relative_to(data.PROJECT_ROOT)}")
 
-    print("\nNow run:")
-    print("  python score.py --predictions validation_predictions.csv "
-          "--december-predictions data/december_chart_inputs.csv")
+# Suppressed when invoked from run.sh / run.ps1, which runs the scorer itself.
+    if os.environ.get("PIPELINE_RUN") != "1":
+        print("\nNow run:")
+        print("  python score.py --predictions validation_predictions.csv "
+              "--december-predictions data/december_chart_inputs.csv")
+
 
 
 if __name__ == "__main__":
